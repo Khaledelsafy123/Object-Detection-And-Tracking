@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Generated output
+runs/
+output/
+
+# Downloaded model weights
+yolo11n.pt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test media files
+bus.jpg
+sample.mp4
+solutions_ci_demo.mp4
