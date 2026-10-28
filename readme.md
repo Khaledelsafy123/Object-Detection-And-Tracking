@@ -36,11 +36,15 @@ Developed as part of the **CodeAlpha AI Internship**, this project demonstrates 
 
 ## 🎬 Demo
 
-<!-- Add a GIF or screenshot of the actual project output here. -->
+<p align="center">
+  <img src="tracking-result.png" alt="YOLO11 Object Detection and ByteTrack Tracking Results" width="900"/>
+</p>
 
 <p align="center">
-  <em>Example: object detection and tracking with bounding boxes and tracking IDs.</em>
+  <em>Object detection and multi-object tracking using YOLO11 and ByteTrack, with bounding boxes, class labels, confidence scores, and tracking IDs.</em>
 </p>
+
+---
 
 ## 🛠️ Tech Stack
 
