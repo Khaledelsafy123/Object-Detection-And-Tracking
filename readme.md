@@ -3,7 +3,7 @@
 <p align="center">
   <strong>Detect. Track. Understand.</strong>
   <br />
-  A computer vision project for detecting and tracking multiple objects in video using YOLO11, OpenCV, and ByteTrack.
+  A computer vision project that detects and tracks multiple objects in video using YOLO11, OpenCV, and ByteTrack.
 </p>
 
 <p align="center">
@@ -17,60 +17,68 @@
 
 ## 📌 Overview
 
-Object Detection & Tracking is a computer vision project that identifies objects in video footage and follows them across consecutive frames.
+**Object Detection & Tracking** is a computer vision project that identifies objects in video footage and tracks their identities across consecutive frames.
 
-The project uses a pretrained **YOLO11** model to detect objects and **ByteTrack** to associate detections across frames. Each detection can be visualized with a bounding box, a class label, a confidence score, and a tracking ID.
+Built with a pretrained **YOLO11n** model and the **ByteTrack** tracking algorithm, the project processes video frame by frame and visualizes detected objects with bounding boxes, class labels, confidence scores, and tracking IDs.
 
-Developed as part of the **CodeAlpha AI Internship**, this project explores practical applications of object detection, video processing, and multi-object tracking.
+Developed as part of the **CodeAlpha AI Internship**, this project demonstrates practical applications of object detection, video processing, and multi-object tracking using Python.
 
 ## ✨ Key Features
 
-| Feature | Description |
+- 🎯 **Object Detection:** Detect multiple objects using a pretrained YOLO11 model.
+- 🆔 **Multi-Object Tracking:** Associate detections across frames using ByteTrack.
+- 📦 **Bounding Boxes:** Visualize the location of detected objects.
+- 🏷️ **Class Labels:** Display predicted categories, such as people, cars, and other supported classes.
+- 📊 **Confidence Scores:** Show the confidence associated with each detection.
+- 🔢 **Tracking IDs:** Identify tracked objects across consecutive frames.
+- 🎥 **Video Processing:** Process local video files frame by frame.
+- 💾 **Video Export:** Save annotated footage for later review.
+
+## 🎬 Demo
+
+<!-- Add a GIF or screenshot of the actual project output here. -->
+
+<p align="center">
+  <em>Example: object detection and tracking with bounding boxes and tracking IDs.</em>
+</p>
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
 |---|---|
-| 🎯 Object Detection | Detect objects using a pretrained YOLO11 model. |
-| 🆔 Object Tracking | Associate detected objects across video frames using ByteTrack. |
-| 📦 Bounding Boxes | Visualize the location of detected objects. |
-| 🏷️ Class Labels | Identify object categories such as cars and people. |
-| 📊 Confidence Scores | Display the model's confidence for each detection. |
-| 🔢 Tracking IDs | Help identify and follow tracked objects across frames. |
-| 🎥 Video Processing | Process local video files and export annotated videos. |
-| 💾 Result Export | Save processed footage for later inspection. |
+| Python | Main programming language |
+| Ultralytics YOLO11 | Object detection |
+| OpenCV | Video input, frame processing, and video output |
+| ByteTrack | Multi-object tracking |
 
 ## ⚙️ How It Works
 
-The processing pipeline follows these steps:
+The application follows a simple computer vision pipeline:
 
-1. **Load the model** — Initialize the pretrained YOLO11 detection model.
-2. **Read the video** — Open the input video and process it frame by frame.
-3. **Detect objects** — Identify objects and predict their bounding boxes.
-4. **Track objects** — Use ByteTrack to associate detections across consecutive frames.
-5. **Visualize predictions** — Draw bounding boxes, class labels, confidence scores, and tracking IDs.
-6. **Export the result** — Write the annotated frames to an output video.
-
-## 🧰 Tech Stack
-
-- **Python** — Main programming language.
-- **Ultralytics YOLO11** — Pretrained object detection model.
-- **OpenCV** — Video input, frame processing, and video output.
-- **ByteTrack** — Multi-object tracking algorithm.
+1. **Model Initialization** — Load the pretrained YOLO11n model.
+2. **Video Input** — Open the selected video file.
+3. **Object Detection** — Predict object classes, bounding boxes, and confidence scores for each frame.
+4. **Object Tracking** — Use ByteTrack to associate detections across frames.
+5. **Visualization** — Annotate frames with bounding boxes, class labels, confidence scores, and tracking IDs.
+6. **Video Export** — Save the annotated frames as an output video.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.10 or a compatible Python version supported by the installed dependencies.
-- pip package manager.
-- A video file for testing.
-- An internet connection for the initial model download, if the model weights are not already available locally.
+- Python 3.10 or a version compatible with the installed dependencies.
+- pip.
+- A local video file for testing.
+- An internet connection for downloading model weights on the first run, if they are not available locally.
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Khaledelsafy123/CodeAlpha_ObjectDetectionAndTracking.git
 cd CodeAlpha_ObjectDetectionAndTracking
 ```
 
-### 2. Create a virtual environment
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -82,29 +90,25 @@ Activate it on Windows:
 venv\Scripts\activate
 ```
 
-### 3. Install dependencies
+### 3. Install Dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-## ▶️ Run the Project
-
-### Process a local video
-
-Run the main application:
+### 4. Run the Application
 
 ```bash
 python main.py
 ```
 
-When prompted, enter the path to your video:
+When prompted, enter the path to your input video:
 
 ```text
 Enter video path: sample.mp4
 ```
 
-You can also provide a full path to a video stored elsewhere on your computer.
+You can enter a full file path if the video is stored in another directory.
 
 After processing, the annotated video is saved to:
 
@@ -112,84 +116,94 @@ After processing, the annotated video is saved to:
 output/tracked_video.mp4
 ```
 
-### Run object detection
+> Make sure the input path and output directory behavior match your current implementation.
+
+## 🧪 Additional Scripts
+
+### Object Detection
 
 ```bash
 python detect.py
 ```
 
-This script demonstrates object detection on a sample image.
+Demonstrates object detection on a sample image.
 
-### Run object tracking
+### Object Tracking
 
 ```bash
 python track.py
 ```
 
-This script demonstrates object tracking on a sample video.
+Demonstrates object tracking on a sample video.
 
-## 🎬 Understanding the Output
+## 📊 Understanding the Output
 
-The annotated video contains visual information that helps interpret the model's predictions.
+| Component | Description |
+|---|---|
+| Bounding Box | Indicates the detected object's location in the frame |
+| Class Label | Displays the predicted object category |
+| Confidence Score | Indicates the model's confidence in a detection |
+| Tracking ID | Identifies a tracked object across frames |
 
-- **Bounding Box:** The rectangular region surrounding a detected object.
-- **Class Label:** The predicted category of the object, such as `car` or `person`.
-- **Confidence Score:** The model's confidence in its detection.
-- **Tracking ID:** An identifier used to associate a tracked object across video frames.
-
-Tracking IDs help maintain object identities across frames, but tracking can occasionally fail when objects are occluded, leave the frame, or become difficult to distinguish.
+Tracking IDs help associate the same object across consecutive frames. However, an ID may change if the object is lost, becomes occluded, or is incorrectly associated with another detection.
 
 ## 📂 Project Structure
 
 ```text
 CodeAlpha_ObjectDetectionAndTracking/
 │
-├── main.py              # Process and track objects in local videos
-├── detect.py            # Object detection demonstration
-├── track.py             # Object tracking demonstration
-├── requirements.txt     # Python dependencies
-├── README.md            # Project documentation
+├── main.py
+├── detect.py
+├── track.py
+├── requirements.txt
+├── README.md
 │
-├── output/
-│   └── tracked_video.mp4
-│
-└── yolo11n.pt            # Pretrained model weights, if included locally
+└── output/
+    └── tracked_video.mp4
 ```
 
-*The output folder and model weights may be created or downloaded at runtime, depending on your setup.*
+The `output/` directory and model weights may be generated or downloaded at runtime. The structure above is illustrative; adjust it to match the files included in the repository.
 
-## 🔬 Technical Notes
+## 🔬 Technical Details
 
 ### Detection vs. Tracking
 
-**Object Detection** identifies objects independently in each frame. It predicts their categories and locations.
+**Object Detection** identifies objects and predicts their locations independently in individual frames.
 
-**Object Tracking** associates detections over time, allowing the system to follow objects across consecutive frames.
+**Object Tracking** associates detections across frames to maintain object identities over time.
 
-Combining both techniques provides more useful video analysis than detecting objects in isolated frames alone.
+Combining the two allows the application to follow multiple objects throughout a video instead of treating every frame as an isolated image.
 
-### Model and Tracker
+### Detection Model
 
-- **YOLO11n:** The nano variant of YOLO11, selected as a lightweight pretrained detection model.
-- **ByteTrack:** Associates detections across frames to maintain tracking identities.
-- **Confidence threshold:** The current scripts use `0.25` as the detection confidence threshold.
+**YOLO11n** is the lightweight nano variant of YOLO11. The project uses pretrained weights for inference rather than training a new detection model from scratch.
 
-The detection threshold affects which predictions are retained; it does not represent the model's overall accuracy.
+### Tracking Algorithm
 
-## ⚠️ Current Limitations
+**ByteTrack** associates object detections across video frames. Its tracking performance depends on detection quality, object visibility, motion, and the configuration used.
 
-- Detection quality depends on video resolution, lighting, object size, and occlusion.
-- Tracking IDs may change when an object is lost and later detected again.
-- Processing speed depends on the hardware and input video.
-- The current main script processes a saved video and exports the result; it is not a live webcam application.
+### Confidence Threshold
+
+The current scripts use a detection confidence threshold of `0.25`.
+
+This setting controls which predictions are retained. It is not a measurement of the model's overall accuracy.
+
+## ⚠️ Limitations
+
+- Detection quality depends on lighting, resolution, object size, and occlusion.
+- Tracking identities may change when objects disappear or become difficult to distinguish.
+- Processing speed depends on the input video and available hardware.
+- The main application processes saved video files rather than providing live webcam tracking.
+- The project has not established benchmark accuracy or tracking metrics unless separately evaluated.
 
 ## 🔮 Future Improvements
 
 - Add real-time webcam detection and tracking.
-- Evaluate detection and tracking performance on different videos.
+- Evaluate performance using suitable detection and tracking metrics.
 - Add configurable confidence thresholds and tracker settings.
-- Provide a simple graphical interface for selecting videos.
-- Compare tracking algorithms under different conditions.
+- Build a simple interface for selecting input videos.
+- Compare tracking algorithms on the same video sequences.
+- Optimize inference performance for different hardware configurations.
 
 ## 👨‍💻 Author
 
