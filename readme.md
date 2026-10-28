@@ -216,5 +216,5 @@ Computer Science Student | AI & Machine Learning
 ---
 
 <p align="center">
-  <sub>Built with Python and Computer Vision.</sub>
+  <sub>Built with Python and Computer Vision</sub>
 </p>
